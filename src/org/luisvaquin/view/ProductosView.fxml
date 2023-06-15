@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="1045.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luisvaquin.controller.ProductoController">
+   <children>
+      <Pane prefHeight="99.0" prefWidth="1045.0" style="-fx-background-color: #1f2f64;">
+         <children>
+            <Label layoutX="398.0" layoutY="13.0" prefHeight="74.0" prefWidth="251.0" text="PRODUCTOS" textFill="#f27d16">
+               <font>
+                  <Font name="Agency FB Bold" size="60.0" />
+               </font>
+            </Label>
+            <Label layoutX="395.0" layoutY="13.0" prefHeight="74.0" prefWidth="264.0" text="PRODUCTOS" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="60.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="10.0" layoutY="109.0" prefHeight="557.0" prefWidth="206.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="214.0" layoutY="-17.0" prefHeight="675.0" prefWidth="30.0" style="-fx-background-color: #1f2f64;" />
+            <VBox layoutX="7.0" layoutY="7.0" prefHeight="510.0" prefWidth="184.0" spacing="12.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="64.0" prefWidth="231.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="NUEVO" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="29.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="77.0" fitWidth="44.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Logo%20Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="64.0" prefWidth="231.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="ELIMINAR" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="29.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="77.0" fitWidth="44.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Logo%20Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="64.0" prefWidth="196.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="EDITAR" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="29.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="77.0" fitWidth="44.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Logo%20Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="64.0" prefWidth="231.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="REPORTE" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="29.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="77.0" fitWidth="44.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Logo%20Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnRegresar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="64.0" prefWidth="231.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="REGRESAR" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="27.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgRegresar" fitHeight="77.0" fitWidth="44.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Icon%20Regresar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="221.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Logo%20Sec.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <GridPane layoutX="263.0" layoutY="112.0" prefHeight="84.0" prefWidth="778.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.66665649414062" minWidth="10.0" prefWidth="124.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.3333435058594" minWidth="10.0" prefWidth="242.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0000305175781" minWidth="10.0" prefWidth="51.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0000305175781" minWidth="10.0" prefWidth="126.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.33331298828125" minWidth="3.999969482421875" prefWidth="250.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="38.0" prefWidth="180.0" text="Código Producto">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="38.0" prefWidth="180.0" text="Cantidad" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="38.0" prefWidth="139.0" text="Nombre Producto" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoProducto" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtCantidadProducto" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNombreProducto" editable="false" prefHeight="10.0" prefWidth="149.0" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblProductos" layoutX="263.0" layoutY="196.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="557.0" prefWidth="778.0" style="-fx-background-color: #F2F2F2;">
+         <columns>
+            <TableColumn fx:id="colCodigoProducto" prefWidth="116.0" text="Cod. Producto" />
+            <TableColumn fx:id="colNombreProducto" prefWidth="340.0" text="Nombre Producto" />
+            <TableColumn fx:id="colCantidadProducto" prefWidth="321.0" text="Cantidad Producto" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

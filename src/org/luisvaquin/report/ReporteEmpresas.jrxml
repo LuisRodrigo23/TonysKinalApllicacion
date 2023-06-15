@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1efaae87-dfe5-4ed8-b040-245a3257b8c0">
+	<property name="ireport.zoom" value="0.8264462809917373"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresa();]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="237" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="16" width="227" height="33" forecolor="#006699" uuid="f99b120a-4b3b-4d2a-9ca1-6db0f0e8d45e"/>
+				<textElement>
+					<font fontName="Arial Black" size="18"/>
+				</textElement>
+				<text><![CDATA[REPORTE EMPRESAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="127" height="35" uuid="80d0a6fd-4ca9-4fdc-a096-60be3c60257a"/>
+				<textElement>
+					<font fontName="Arial Black" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Codigo Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="1" width="118" height="20" uuid="10c78762-796b-4ddf-b267-79c8edc406d4"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="1" width="131" height="20" uuid="736131bf-86c3-4f90-8403-aa7491cb1fca"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Direccion Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="1" width="122" height="20" uuid="2b451a6f-37c4-4ca0-8f41-0bd5e8ee7412"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Telefono Empresa]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="68" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="100" height="20" uuid="f75aafc2-ddcd-41ab-bdbb-6646bd45cb9e"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="26" width="569" height="1" uuid="e1632b2b-0b86-45ef-8de9-1cd56ce68c21"/>
+				<graphicElement>
+					<pen lineColor="#000099"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="138" y="0" width="100" height="20" uuid="91f0b98b-7893-4bec-b1d8-dc75b8734c44"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="287" y="0" width="100" height="20" uuid="364991a3-11b4-4083-82cf-701c211eeb5b"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="461" y="2" width="100" height="20" uuid="d43c65c5-be62-4d23-aa58-d4e4272a0666"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="43" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="372" y="25" width="200" height="29" uuid="84ae84f8-d5fa-4483-bdc8-3cd86d325aa8"/>
+				<textElement>
+					<font isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SERVICES-FOOD-RESTRAURANT]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
